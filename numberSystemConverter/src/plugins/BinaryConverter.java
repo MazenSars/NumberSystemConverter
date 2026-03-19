@@ -1,9 +1,11 @@
-package numberSystemConverter;
+package plugins;
 
-public class HexConverter implements NumberSystem {
+import numberSystemConverter.NumberSystem;
+
+public class BinaryConverter implements NumberSystem {
 
 	public String getName() {
-		return "Hex";
+		return "Bin";
 	}
 
 	public String convert(int n) throws IllegalArgumentException {
@@ -11,7 +13,7 @@ public class HexConverter implements NumberSystem {
 			throw new IllegalArgumentException("negative numbers not supported");
 		}
 		else {
-			return Integer.toHexString(n);
+			return Integer.toBinaryString(n);
 		}
 	}
 	
